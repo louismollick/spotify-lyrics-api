@@ -36,7 +36,7 @@ A Rest API for fetching lyrics from Spotify which is powered by Musixmatch. Comm
 The easiest way to run the API is using Docker:
 
 ```bash
-docker run -d -p 8080:8080 -e SP_DC=your_sp_dc_cookie akashrchandran/spotify-lyrics-api
+docker run -d -p 8080:8080 -e SP_DC=your_sp_dc_cookie ghcr.io/louismollick/spotify-lyrics-api
 ```
 
 Then access the API at `http://localhost:8080/?trackid=YOUR_TRACK_ID`
@@ -46,7 +46,7 @@ Then access the API at `http://localhost:8080/?trackid=YOUR_TRACK_ID`
 ```yaml
 services:
   spotify-lyrics-api:
-    image: akashrchandran/spotify-lyrics-api:latest
+    image: ghcr.io/louismollick/spotify-lyrics-api:main
     ports:
       - "8080:8080"
     environment:
@@ -54,7 +54,7 @@ services:
     restart: unless-stopped
 ```
 
-> 📦 [View on Docker Hub](https://hub.docker.com/r/akashrchandran/spotify-lyrics-api)
+> 📦 [View on GHCR](https://github.com/users/louismollick/packages/container/package/spotify-lyrics-api)
 
  # Install using Composer
 ```
